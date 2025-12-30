@@ -1,0 +1,166 @@
+/* Reset */
+body, h1, p, button, textarea {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h1 {
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  #journalApp {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .mood-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  
+  .mood-btn {
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    transition: transform 0.2s;
+  }
+  
+  .mood-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  .mood-btn.active {
+    outline: 2px solid #007BFF;
+    background-color: #e6f0ff;
+    border-radius: 6px;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: none;
+    font-size: 1rem;
+  }
+  
+  button#saveEntry {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button#saveEntry:hover {
+    background-color: #0056b3;
+  }
+  
+  #quote {
+    margin-top: 1.5rem;
+    font-style: italic;
+    color: #555;
+  }
+  
+  #pastEntries {
+    margin-top: 2rem;
+    width: 100%;
+  }
+  
+  /* .entry-card {
+    background-color: #fff;
+    border-left: 5px solid #007BFF;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  } */
+
+  blockquote {
+    font-style: italic;
+    color: #555;
+    border-left: 4px solid #00fbff;
+    margin: 1rem 0;
+    padding-left: 1rem;
+    background-color: #f0f8ff;
+    border-radius: 4px;
+  }
+  
+/* Entry card container (make sure hover works) */
+.entry-card {
+  position: relative; /* ensures the actions are positioned relative to the card */
+  padding: 15px;
+  margin-bottom: 15px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+.entry-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Action buttons container (hidden by default) */
+.entry-actions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: none; /* hidden initially */
+  gap: 8px;
+}
+
+/* Show on hover */
+.entry-card:hover .entry-actions {
+  display: flex;
+}
+
+/* Buttons styling */
+.entry-btn {
+  padding: 3px 8px;   /* slimmer vertically */
+  font-size: 0.8em;   /* slightly smaller text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+/* Edit button */
+.edit-btn {
+  background-color: #4caf50;
+  color: white;
+}
+.edit-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Delete button */
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+.delete-btn:hover {
+  background-color: #da190b;
+  transform: scale(1.05);
+}
